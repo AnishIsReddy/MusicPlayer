@@ -2,6 +2,7 @@ let firstinteract = true;
 let AudioObj = document.createElement("audio");
 AudioObj.id = 'audio-player';
 AudioObj.controls = true;
+AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
