@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'DIN Next LT Pro Bold';
+    src: url('//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot');
+    src: url('//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.eot?#iefix') format('embedded-opentype'), url('//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff2') format('woff2'), url('//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.woff') format('woff'), url('//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.ttf') format('truetype'), url('//db.onlinewebfonts.com/t/3a88649e176a40a6d80b395ca0ae430d.svg#DIN Next LT Pro Bold') format('svg');
+}
+
+:root {
+    --v-red: #ff4655;
+    --v-white: #ece8e1;
+    --v-black: #0f1923;
+    --v-outline: rgba(236, 232, 225, .5);
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Calibri';
+    font-size: 10px;
+    margin: 0;
+    color: var(--v-white);
+    background-color: var(--v-black);
+    text-rendering: optimizeLegibility;
+}
+img{
+  display:block;
+  position: relative;
+  top: 18px;
+  padding-bottom: 17px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+input[type=text] {
+  font-family: 'Helvetica ';
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: var(--v-black);
+}
+
+.form__field {
+  font-family: inherit;
+  width: 80%;
+  border: 0px solid var(--v-red);
+  border-bottom: 1px solid var(--v-red);
+  float: center;
+  outline: 0;
+  font-size: 1.5rem;
+  color: var(--v-white);
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+P { text-align: center }
+H2 { text-align: center }
+H1 { text-align: center }
+#container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.box {
+    width: 70%;
+}
+
+.logo {
+    margin-bottom: 40px;
+    fill: var(--v-white);
+}
