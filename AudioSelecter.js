@@ -1,9 +1,8 @@
 let firstinteract = true;
 let AudioObj = document.createElement("audio");
 AudioObj.id = 'audio-player';
-AudioObj.controls = 'controls';
+AudioObj.controls = true;
 AudioObj.type = 'audio/mpeg';
-AudioObj.style.width = "100%";
 
 function playNew(){
     AudioObj.src = "media/" + Math.floor(Math.random() * 56) + ".mp3";
