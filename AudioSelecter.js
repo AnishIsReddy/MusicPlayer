@@ -6,6 +6,7 @@ AudioObj.type = 'audio/mpeg';
 
 function playNew(){
     AudioObj.src = "media/" + Math.floor(Math.random() * 56) + ".mp3";
+    AudioObj.load();
     AudioObj.play();
 }
 
@@ -13,6 +14,7 @@ function onClick(){
     document.getElementById("start").style.display = "none";
     document.getElementById("ref").appendChild(AudioObj);
     AudioObj.src = "media/" + Math.floor(Math.random() * 56) + ".mp3";
+    AudioObj.load();
     AudioObj.play();
     AudioObj.addEventListener("ended", playNew);
 };
