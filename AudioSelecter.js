@@ -1,5 +1,5 @@
 let firstinteract = true;
-let AudioObj = document.createElement("audio");
+let AudioObj = document.createElement("video");
 AudioObj.id = 'audio-player';
 AudioObj.controls = true;
 AudioObj.preload = "auto";
