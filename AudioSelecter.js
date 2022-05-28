@@ -6,7 +6,7 @@ AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
-    if(AudioObj.duration != "NaN"){
+    if(AudioObj.duration != "NaN" && AudioLen < AudioObj.duration){
         AudioLen = AudioObj.duration;
         console.log(AudioLen);
     }
