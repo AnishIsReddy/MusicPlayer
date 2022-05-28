@@ -6,10 +6,11 @@ AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
-    if(AudioObj.currentTime == AudioObj.duration)
+    if(!AudioObj.seeking){
         AudioObj.src = "media/" + Math.floor(Math.random() * 56) + ".mp3";
         AudioObj.load();
         AudioObj.play();
+    }
 }
 
 function onClick(){
