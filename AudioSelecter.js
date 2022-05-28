@@ -6,7 +6,7 @@ AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
-    if(!AudioObj.seeking){
+    if(AudioObj.duration > AudioObj.currentTime){
         AudioObj.src = "media/" + Math.floor(Math.random() * 56) + ".mp3";
         AudioObj.load();
         AudioObj.play();
