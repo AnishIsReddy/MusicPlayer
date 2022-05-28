@@ -6,13 +6,13 @@ AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
+    document.getElementById("debug").innerHTML = AudioObj.duration;
     if(AudioObj.duration != "NaN" && AudioLen < AudioObj.duration){
         AudioLen = AudioObj.duration;
         console.log(AudioLen);
     }
     if(AudioObj.duration <= AudioObj.currentTime && AudioObj.duration == AudioLen && AudioLen != 0){
         console.log(AudioLen + "/" + AudioObj.currentTime);
-        document.getElementById("debug").innerHTML = AudioObj.duration + "/" + AudioObj.currentTime;
         AudioObj.src = "media/" + Math.floor(Math.random() * 49) + ".mp3";
         AudioObj.load();
         AudioObj.play();
