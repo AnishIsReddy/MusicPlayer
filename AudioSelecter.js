@@ -19,7 +19,7 @@ function onClick(){
     AudioObj.src = "media/" + Math.floor(Math.random() * 56) + ".mp3";
     AudioObj.load();
     AudioObj.play();
-    AudioObj.addEventListener("ended", playNew);
+    AudioObj.addEventListener("timeupdate", playNew);
 };
 
 function onLoad(){
