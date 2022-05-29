@@ -5,12 +5,9 @@ AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
-    if(AudioObj.duration != NaN && AudioObj.duration <= AudioObj.currentTime){
-        console.log(AudioLen + "/" + AudioObj.currentTime);
-        AudioObj.src = "media/" + Math.floor(Math.random() * 49) + ".mp3";
-        AudioObj.load();
-        AudioObj.play();
-    }
+    AudioObj.src = "media/" + Math.floor(Math.random() * 49) + ".mp3";
+    AudioObj.load();
+    AudioObj.play();
 }
 
 function onClick(){
@@ -19,7 +16,7 @@ function onClick(){
     AudioObj.src = "media/" + Math.floor(Math.random() * 49) + ".mp3";
     AudioObj.load();
     AudioObj.play();
-    AudioObj.addEventListener("timeupdate", playNew);
+    AudioObj.addEventListener("ended", playNew);
 };
 
 function onLoad(){
