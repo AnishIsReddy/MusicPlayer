@@ -5,7 +5,7 @@ AudioObj.preload = "auto";
 AudioObj.type = 'audio/mpeg';
 
 function playNew(){
-    if(AudioLen <= AudioObj.currentTime && AudioLen != 0){
+    if(AudioObj.duration != NaN && AudioObj.duration <= AudioObj.currentTime){
         console.log(AudioLen + "/" + AudioObj.currentTime);
         AudioObj.src = "media/" + Math.floor(Math.random() * 49) + ".mp3";
         AudioObj.load();
